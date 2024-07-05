@@ -14,7 +14,7 @@ export const connect = async()=>{
         mongoose.connection.on('disconnected', ()=> console.log('MongoDB | disconnected'))
         mongoose.connection.on('reconnected', ()=> console.log('MongoDB | reconnected to MongoDB'))
 
-        return await mongoose.connect('mongodb://127.0.0.1:27017/BankingSystemAV')
+        return await mongoose.connect('mongodb+srv://incmonster365:incmonster@cluster0.ldym6g7.mongodb.net/BankingSystemAV?retryWrites=true&w=majority&appName=Cluster0')
     } catch (err) {
         console.error('Database connection failed, ',err);
     }
